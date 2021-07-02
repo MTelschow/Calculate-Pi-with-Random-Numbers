@@ -1,0 +1,20 @@
+function calculatePi (numberOfIterations){
+	let pointsInCircle = 0;
+    let xValue = 0;
+    let yValue = 0;
+    
+	for (var i =0;i< numberOfIterations; i++){
+    	xValue = Math.random();
+        yValue = Math.random();
+        
+        if (Math.pow(xValue,2)+Math.pow(yValue,2)<1){
+        	pointsInCircle = pointsInCircle + 1;
+        }
+        
+    }
+    
+    return pointsInCircle / numberOfIterations * 4;
+}
+
+
+console.log(calculatePi(499));
